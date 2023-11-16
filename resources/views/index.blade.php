@@ -112,6 +112,7 @@
                     </div>
                 @endforeach
             </div>
+            {{ $courses->withQueryString()->links('pagination::bootstrap-5') }}
         </div>
     </section>
 
