@@ -3,6 +3,7 @@
 namespace App\Http\Controllers; 
  
 use App\Models\Category; 
+use App\Models\Course;
 use Illuminate\Http\Request; 
  
 class CategoryController extends Controller 
@@ -25,6 +26,11 @@ class CategoryController extends Controller
  
             return redirect()->back(); 
         } 
+
+        public function show_categories($id){
+            $courses = Course::where("category_id", $id)->get();
+            return view("courses", ["courses"=>$courses]);
+        }
  
  
 }

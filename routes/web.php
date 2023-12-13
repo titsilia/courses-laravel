@@ -4,6 +4,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,5 @@ Route::get('/exit', [AuthController::class, 'exit']);
 Route::get('/application/{id_application}/confirm', [ApplicationController::class, 'confirm']);
 
 Route::post('/course/create', [CourseController::class, 'create']);
+
+Route::get("/courses/{id}",[CategoryController::class, "show_categories"]);

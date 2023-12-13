@@ -25,47 +25,16 @@
         <section id="hero" class="hero d-flex justify-content-center align-items-center text-white ">
             <h1 class="bg-dark p-1 opacity-75">Онлайн курсы - это круто!</h1>
         </section>
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </section>
     </main>
+
+  <div class="container">
+    <h2 class="m-3">Виды курсов</h1>
+      <div class="col-sm-6">
+        @foreach ($categories as $item)
+          <a style="display: block;" class="card-title" href="/courses/{{$item->id}}">{{$item->title}}</a>
+        @endforeach
+      </div>
+  </div>
 
     <section id="courses">
         <div class="container">
